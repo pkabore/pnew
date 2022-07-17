@@ -7,7 +7,9 @@
     --font-size: 15px;
     --family-sans: "Inter var", system-ui, "Roboto", sans-serif;
     --line-height: calc(var(--font-size) * 1.5);
-    --text-color: #333;
+    --spacing: 2rem;
+    --spacingv: calc(var(--line-height) / 2);
+    --text-color: #111;
   }
 
   @font-face {
@@ -35,43 +37,35 @@
   }
 
   body {
-    font: var(--font-size) var(--family-sans);
+    font: 15px/22px var(--family-sans);
+    font-weight: 450;
     line-height: var(--line-height);
     letter-spacing: -0.004em;
-    font-weight: 450;
+    color: var(--text-color);
+    -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: var(--text-color);
     -webkit-overflow-scrolling: touch;
     font-kerning: normal;
-    -webkit-font-kerning: normal;
-    -ms-font-kerning: normal;
-    -moz-font-kerning: normal;
-    -o-font-kerning: normal;
-
     font-variant-ligatures: contextual common-ligatures;
-    -webkit-font-variant-ligatures: contextual common-ligatures;
-    -ms-font-variant-ligatures: contextual common-ligatures;
-    -moz-font-variant-ligatures: contextual common-ligatures;
-    -o-font-variant-ligatures: contextual common-ligatures;
-    font-feature-settings: "kern", "liga", "calt", "ss01", "tnum", "frac",
-      "ss01", "cv10", "cv07", "ss03";
-    -webkit-font-feature-settings: "kern", "liga", "calt", "ss01", "tnum",
-      "frac", "ss01", "cv10", "cv07", "ss03";
+    font-feature-settings: "kern", "liga", "calt", "ss01", "tnum", "cv10",
+      "cv07", "ss03";
   }
 
   h1,
   h2 {
-    line-height: 1.3;
     font-weight: bold;
   }
 
   h1 {
     font-weight: 900;
-    font-size: 1.5rem;
   }
 
   h2 {
     font-size: 1.25rem;
+  }
+
+  p{
+    @apply leading-relaxed mb-7;
   }
 }
